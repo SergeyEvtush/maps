@@ -1,0 +1,28 @@
+.content {
+	margin: 0 auto;
+}
+.maps {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.maps__content {
+	width: 100%;
+}
+.showing__maps {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+}
+.showing__maps img {
+	width: 100%;
+	height: 100%;
+}
+.prediction {
+}
+.prediction__content {
+}
+.content__buttons {
+}

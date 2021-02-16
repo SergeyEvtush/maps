@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Hanalei-Regular";
+  font-display: swap;
+  src: url("../fonts/Hanalei-Regular.woff") format("woff"), url("../fonts/Hanalei-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Wider";
+  font-display: swap;
+  src: url("../fonts/Wider.woff") format("woff"), url("../fonts/Wider.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.maps {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maps__content {
+  width: 100%;
+}
+
+.showing__maps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 100%;
+}
+
+.showing__maps img {
+  width: 100%;
+}
+
+.name {
+  font-family: Wider;
+  color: white;
+  font-size: 70px;
+}
+
+.header {
+  font-size: 30px;
+  font-family: Hanalei-Regular;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background: #000;
+}
+/*# sourceMappingURL=style.css.map */
