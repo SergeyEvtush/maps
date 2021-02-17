@@ -50,8 +50,8 @@
   max-width: 100%;
 }
 
-.showing__maps img {
-  width: 100%;
+.map img {
+  min-width: 100%;
   height: 100%;
 }
 
@@ -70,4 +70,10 @@
 
 body {
   background: #000;
+}
+
+body .back__ground {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
