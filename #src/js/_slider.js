@@ -1,23 +1,3 @@
-
-
-//функция проверяющая поддерживает ли браузер webp и автоматически добавляет класс к тегу body
-function testWebP(callback) {
-
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-	if (support == true) {
-		document.querySelector('body').classList.add('webp');
-	} else {
-		document.querySelector('body').classList.add('no-webp');
-	}
-});;
 //JavaScript метод document.querySelectorAll() возвращает список элементов в пределах документа (статичный (не живой) объект типа NodeList), соответствующих указанному селектору, или группе селекторов. Если совпадений не найдено, то возвращается пустой объект типа NodeList.Объект NodeList представляет из себя набор узлов, к котрым можно обращаться по номерам индексов, индекс коллекции начинается с 0. Вы можете использовать свойство length объекта NodeList для определения количества элементов, соответствующих указанному селектору и при необходимости перебирать все эти элементы в цикле.
 
 var slides = document.querySelectorAll('#slides .slide');//получаем все слайды из контейнера
@@ -75,4 +55,4 @@ pauseButton.onclick = function () {
 	} else {
 		playSlideshow();
 	}
-};;
+};

@@ -1,2 +1,3 @@
-@@include('alert.js');
+
 @@include('webpСheckBrowserFunction.js');
+@@include('_slider.js');

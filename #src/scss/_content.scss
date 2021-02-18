@@ -1,0 +1,47 @@
+.content {
+}
+.maps {
+}
+.maps__content {
+}
+.maps__rubashka {
+}
+.showing__maps {
+}
+.sliding__maps {
+	position: relative;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+//стили для слайд шоу
+#slide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+}
+.shoing {
+	opacity: 1;
+	z-index: 2;
+}
+//второстепенные стили
+.slide {
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+}
+.map {
+}
+.prediction {
+}
+.prediction__content {
+}
+.content__buttons {
+}
+.prediction__button {
+}
