@@ -9,6 +9,7 @@ let path = {
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
+
 	},
 	//для папок с исходниками
 	src: {
@@ -17,13 +18,15 @@ let path = {
 		js: sourse_folder + "/js/script.js",//тоже самое что и для css
 		img: sourse_folder + "/img/**/*.{jpg,png,svg,dif,ico,webp}",//"**/"-означает что мы будем слушать все подпапки которые нах-ся в папке imgв {} указаны расширения которые будут надо смотреть
 		fonts: sourse_folder + "/fonts/*.ttf",
+
 	},
 	//для файлов котрые надо слушать и сразу изменять готовое
 	watch: {
 		html: sourse_folder + "/**/*.html",//слушаем и меняем все что html
 		css: sourse_folder + "/scss/**/*.scss",
 		js: sourse_folder + "/js/**/*.js",
-		img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
+		img: sourse_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+
 
 	},
 	clean: "./" + project_folder + "/"
@@ -142,6 +145,7 @@ function images() {
 		//синхронизирую с браузером
 		.pipe(browsersync.stream())
 }
+
 function fonts(params) {
 	src(path.src.fonts)//получаем исходники шрифтов
 		.pipe(ttf2woff())//конвертируем
@@ -208,6 +212,7 @@ function watchFiles() {
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.img], images);
+
 }
 //функция для очищения папки distr
 function clean(params) {

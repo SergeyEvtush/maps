@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Hanalei-Regular";
   font-display: swap;
@@ -14,12 +15,151 @@
   font-style: normal;
 }
 
-.content {
+#sliding__maps {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 500px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in 0.1s;
+  transition: all 1s ease-in 0.1s;
+  left: 0;
+}
+
+.map img {
+  width: 100%;
+}
+
+.arrows {
+  position: relative;
+  margin: -20% auto;
+  width: 600px;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+}
+
+.no_active {
+  color: red;
+}
+
+.next {
+  right: -10%;
+}
+
+.prev {
+  left: 10%;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+.name {
+  font-family: Wider;
+  color: white;
+  font-size: 70px;
+}
+
+body {
+  background: #000;
+}
+
+body .back__ground {
+  max-width: 100%;
+  height: 100%;
+  display: block;
   margin: 0 auto;
 }
 
-.maps {
-  width: 100%;
+.wraper {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,46 +169,10 @@
           flex-direction: column;
 }
 
-.maps__content {
-  width: 100%;
-}
-
-.showing__maps {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 100%;
-}
-
-.showing__maps img {
-  width: 100%;
-  height: 100%;
-}
-
-.name {
-  font-family: Wider;
-  color: white;
-  font-size: 70px;
-}
-
 .header {
   font-size: 30px;
   font-family: Hanalei-Regular;
   color: white;
   text-align: center;
-}
-
-body {
-  background: #000;
 }
 /*# sourceMappingURL=style.css.map */
