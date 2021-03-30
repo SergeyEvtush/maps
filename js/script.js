@@ -25,6 +25,7 @@ for (let i = 0; i < Slides.length; i++) {
 	});
 
 }
+
 let i = 0;
 let btnNext = document.getElementById('next');
 let btnPrew = document.getElementById('prew');
@@ -37,19 +38,6 @@ btnNext.addEventListener("click", function () {
 	} else {
 		Slides[i - 1].classList.remove("active");
 		Slides[i].classList.add("active");
-	}
-
-
-});
-btnPrew.addEventListener("click", function () {
-	++i;
-	if (i >= Slides.length) {
-		Slides[i - 1].classList.add("active");
-		i = 0;
-		Slides[i].classList.remove("active");
-	} else {
-		Slides[i - 1].classList.add("active");
-		Slides[i].classList.remove("active");
 	}
 
 });
