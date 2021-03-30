@@ -5,6 +5,9 @@ for (let i = 0; i < Slides.length; i++) {
 	const Noactivevar = Noactive[i];
 	const Activevar = Active[i];
 	const Slidesvar = Slides[i];
+
+
+
 	function makeFrases() {
 		var words1 = ["у тебя", "для тебя", "тебе", "вам", "для вас"];
 		var words2 = ["благоприятное", "отличная", "хороший", "не плохая", "интересная"];
@@ -13,14 +16,20 @@ for (let i = 0; i < Slides.length; i++) {
 		var rand2 = Math.floor(Math.random() * words2.length);
 		var rand3 = Math.floor(Math.random() * words3.length);
 		var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
-		alert(phrase);
+		return phrase;
+	};
+
+	var message = makeFrases();
+	function text(mes) {
+		mes = document.getElementById("message__text");
+		mes.innerHTML(message);
 	};
 	Slidesvar.addEventListener("click", function (e) {
 		Slidesvar.classList.toggle('returnn')
 		Activevar.classList.toggle('_active');
 		Noactivevar.classList.toggle('_no_active');
 		if (Activevar.classList.contains('_active')) {
-			makeFrases();
+			text();
 		}
 	});
 
