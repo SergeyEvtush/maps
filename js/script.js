@@ -16,20 +16,26 @@ for (let i = 0; i < Slides.length; i++) {
 		var rand2 = Math.floor(Math.random() * words2.length);
 		var rand3 = Math.floor(Math.random() * words3.length);
 		var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
-		return phrase;
+		//alert(phrase);
+		document.getElementById("message").innerHTML = phrase;
 	};
 
-	var message = makeFrases();
-	function text(mes) {
-		mes = document.getElementById("message__text");
-		mes.innerHTML(message);
-	};
+
+
+
+
 	Slidesvar.addEventListener("click", function (e) {
 		Slidesvar.classList.toggle('returnn')
 		Activevar.classList.toggle('_active');
 		Noactivevar.classList.toggle('_no_active');
 		if (Activevar.classList.contains('_active')) {
-			text();
+
+
+			makeFrases();
+		}
+		else {
+			document.getElementById("message").innerHTML = " ";
+
 		}
 	});
 
